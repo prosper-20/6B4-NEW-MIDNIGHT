@@ -85,16 +85,27 @@ WSGI_APPLICATION = 'NEWS.wsgi.application'
 # }
 
 
-DATABASES = {     
+# DATABASES = {     
+#     'default': {
+#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     'NAME': 'NEWS',
+#     'USER': 'postgres',
+#     'PASSWORD': config('DB_PASSWORD'),
+#     'HOST': 'localhost',
+#     'PORT': '5432'  
+#     } 
+# } 
+
+DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'NEWS',
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'railway',
     'USER': 'postgres',
     'PASSWORD': config('DB_PASSWORD'),
-    'HOST': 'localhost',
-    'PORT': '5432'  
+    'HOST': 'containers-us-west-130.railway.app',
+    'PORT': '6322'  
     } 
-} 
+}
 
 STORAGES = {
     "staticfiles": {
